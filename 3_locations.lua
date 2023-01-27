@@ -1,24 +1,16 @@
 local points = { --Table with both points
 
     ["a"] = {
-        x = 100,
-        y = 120
+        x = 2,
+        y = 4
     },
     ["b"] = {
-        x = 200,
-        y = 250
+        x = 6,
+        y = 8
     },
 
 }
 
-local DIFx = points["a"].x - points["b"].x -- Simple maths for diffrenceses between x and y axis of a point
-local DIFy = points["a"].y - points["b"].y
+local dist = math.sqrt( (points["b"].x-points["a"].x)^2 + (points["b"].y-points["a"].y)^2 )
 
-if DIFx < 0 then -- Checking if values are negative and turning them into positive 
-    DIFx = -DIFx
-end
-if DIFy < 0 then
-    DIFy = -DIFy
-end
-
-print("Diffrance between x axis : "..DIFx..", Diffrance between y axis : "..DIFy.."")
+print("Distance - "..dist.."")
